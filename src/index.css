@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+@tailwind base;
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  @apply bg-[#fff6ed] dark:bg-[#0A192F] h-full scroll-smooth;
+}
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app {
+    @apply h-screen scroll-smooth;
+  }
+
+  .square-img {
+    background-image: url("./images/headshot.png");
+  }
+
+  .project-one-gif {
+    background-image: url("./images/movie-library.gif");
+  }
+}

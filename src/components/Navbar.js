@@ -19,36 +19,21 @@ export default function Navbar(props) {
         </div>
         <div
           className="w-full dark:text-white hidden sm:w-3/5 sm:flex 
-                    items-center justify-center gap-10 font-mono"
+                    items-center justify-center gap-10 font-mono text-xs sm:text-sm lg:text-xl"
         >
-          <span
-            className="text-xl cursor-pointer"
-            onClick={() => props.setNavIndex(1)}
-          >
+          <span className="cursor-pointer" onClick={() => props.setNavIndex(1)}>
             Home
           </span>
-          <span
-            className="text-xl cursor-pointer"
-            onClick={() => props.setNavIndex(2)}
-          >
+          <span className="cursor-pointer" onClick={() => props.setNavIndex(2)}>
             About
           </span>
-          <span
-            className="text-xl cursor-pointer"
-            onClick={() => props.setNavIndex(3)}
-          >
+          <span className="cursor-pointer" onClick={() => props.setNavIndex(3)}>
             Projects
           </span>
-          <span
-            className="text-xl cursor-pointer"
-            onClick={() => props.setNavIndex(4)}
-          >
+          <span className="cursor-pointer" onClick={() => props.setNavIndex(4)}>
             Skill
           </span>
-          <span
-            className="text-xl cursor-pointer"
-            onClick={() => props.setNavIndex(5)}
-          >
+          <span className="cursor-pointer" onClick={() => props.setNavIndex(5)}>
             Contact
           </span>
         </div>
@@ -71,8 +56,8 @@ export default function Navbar(props) {
         </div>
         <div className="relative">
           {on && (
-            <div className="absolute bg-[#fff6ed] px-20 py-6 z-20 rounded-lg dark:text-white flex flex-col gap-10 font-mono">
-              <span>
+            <div className="fixed right-0 bg-[#fff6ed] px-20 py-6 z-20 rounded-b-lg dark:text-white flex flex-col gap-10 font-mono shadow-md">
+              <span className="flex justify-end">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 cursor-pointer"
@@ -80,6 +65,7 @@ export default function Navbar(props) {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={2}
+                  onClick={toggler}
                 >
                   <path
                     strokeLinecap="round"

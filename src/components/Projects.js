@@ -56,7 +56,7 @@ export default function Projects(props) {
             className={`${
               navIndex === 1 ? "text-white bg-custom-red" : "text-custom-red"
             } 
-            flex border-slate-800 dark:border-white border py-4 px-8 gap-5`}
+            flex border-slate-800 dark:border-white border py-3 px-6 sm:py-4 sm:px-8 gap-5`}
           >
             <span className="font-mono text-sm sm:text-md lg:text-base">
               Project 01

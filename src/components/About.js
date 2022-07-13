@@ -14,8 +14,8 @@ export default function About(props) {
           <p className="dark:text-white">
             <span
               className="my-2 block sm:text-sm lg:text-base first-line:uppercase first-line:tracking-widest
-              first-letter:text-7xl first-letter:font-bold
-              first-letter:mr-3 first-letter:float-left"
+              first-letter:text-7xl first-letter:font-bold first-letter:font-lobster
+              first-letter:mr-3 first-letter:float-left font-medium"
             >
               A Junior Web Developer who loves building interactive web apps
               from beautiful Figma designs.
@@ -23,10 +23,10 @@ export default function About(props) {
             <span className="my-2 block sm:text-sm lg:text-base">
               My interest in coding started back in 2016 when I did a compulsory
               college course in Java programming. That was when I realised that
-              building things that live in computers was my life's purpose.
+              building things that live in computers was my life's purpose 😅
             </span>
             <span className="my-2 block sm:text-sm lg:text-base">
-              Currently, I'm hoping to secure a role as a ReactJS developer at a
+              I'm currently seeking to secure a role as a ReactJS developer at a
               firm where I can do my best work while learning and growing.
             </span>
           </p>

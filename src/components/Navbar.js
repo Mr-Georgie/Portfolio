@@ -42,6 +42,12 @@ export default function Navbar(props) {
             className="text-xl cursor-pointer"
             onClick={() => props.setNavIndex(4)}
           >
+            Skill
+          </span>
+          <span
+            className="text-xl cursor-pointer"
+            onClick={() => props.setNavIndex(5)}
+          >
             Contact
           </span>
         </div>

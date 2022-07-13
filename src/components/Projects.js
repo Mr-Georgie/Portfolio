@@ -58,7 +58,9 @@ export default function Projects(props) {
             } 
             flex border-slate-800 dark:border-white border py-4 px-8 gap-5`}
           >
-            <span className="font-mono">Project 01</span>
+            <span className="font-mono sm:text-sm lg:text-base">
+              Project 01
+            </span>
           </button>
           <button
             onClick={() => setNavIndex(2)}
@@ -67,7 +69,9 @@ export default function Projects(props) {
             } 
             flex border-slate-800 dark:border-white border py-4 px-8 gap-5`}
           >
-            <span className="font-mono">Project 02</span>
+            <span className="font-mono sm:text-sm lg:text-base">
+              Project 02
+            </span>
           </button>
           <button
             onClick={() => setNavIndex(3)}
@@ -76,7 +80,9 @@ export default function Projects(props) {
             } 
             flex border-slate-800 dark:border-white border py-4 px-8 gap-5`}
           >
-            <span className="font-mono">Project 03</span>
+            <span className="font-mono sm:text-sm lg:text-base">
+              Project 03
+            </span>
           </button>
         </div>
         <div className="pt-6 lg:pt-0">
@@ -84,7 +90,7 @@ export default function Projects(props) {
             onClick={() => props.navHandler("next")}
             className="flex bg-custom-blue text-white border-slate-800 dark:border-white border-r border-t py-4 px-8 gap-5"
           >
-            <span className="font-mono">Hire Me!</span>
+            <span className="font-mono">See my skills</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 animate-bounce"

@@ -5,6 +5,7 @@ import useToggle from "../hooks/useToggle";
 
 export default function Navbar(props) {
   const { on: onDarkMode, toggler: darkModeToggler } = useToggle(false);
+  const { on, toggler } = useToggle(false);
 
   const themeToggler = () => {
     darkModeToggler();
@@ -59,6 +60,7 @@ export default function Navbar(props) {
             viewBox="0 0 24 24"
             stroke="currentColor"
             strokeWidth={2}
+            onClick={toggler}
           >
             <path
               strokeLinecap="round"
@@ -66,6 +68,58 @@ export default function Navbar(props) {
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
+        </div>
+        <div className="relative">
+          {on && (
+            <div className="absolute bg-[#fff6ed] px-20 py-6 z-20 rounded-lg dark:text-white flex flex-col gap-10 font-mono">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </span>
+              <span
+                className="text-xl cursor-pointer"
+                onClick={() => props.setNavIndex(1)}
+              >
+                Home
+              </span>
+              <span
+                className="text-xl cursor-pointer"
+                onClick={() => props.setNavIndex(2)}
+              >
+                About
+              </span>
+              <span
+                className="text-xl cursor-pointer"
+                onClick={() => props.setNavIndex(3)}
+              >
+                Projects
+              </span>
+              <span
+                className="text-xl cursor-pointer"
+                onClick={() => props.setNavIndex(4)}
+              >
+                Skill
+              </span>
+              <span
+                className="text-xl cursor-pointer"
+                onClick={() => props.setNavIndex(5)}
+              >
+                Contact
+              </span>
+            </div>
+          )}
         </div>
         <div className="flex md:justify-center items-center sm:w-1/5 pr-4">
           <div className="bg-black/[.5] rounded-full p-2">

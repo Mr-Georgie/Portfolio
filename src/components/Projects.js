@@ -58,7 +58,7 @@ export default function Projects(props) {
             } 
             flex border-slate-800 dark:border-white border py-4 px-8 gap-5`}
           >
-            <span className="font-mono sm:text-sm lg:text-base">
+            <span className="font-mono text-sm sm:text-md lg:text-base">
               Project 01
             </span>
           </button>
@@ -69,7 +69,7 @@ export default function Projects(props) {
             } 
             flex border-slate-800 dark:border-white border py-4 px-8 gap-5`}
           >
-            <span className="font-mono sm:text-sm lg:text-base">
+            <span className="font-mono text-sm sm:text-md lg:text-base">
               Project 02
             </span>
           </button>
@@ -80,7 +80,7 @@ export default function Projects(props) {
             } 
             flex border-slate-800 dark:border-white border py-4 px-8 gap-5`}
           >
-            <span className="font-mono sm:text-sm lg:text-base">
+            <span className="font-mono text-sm sm:text-md lg:text-base">
               Project 03
             </span>
           </button>

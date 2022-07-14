@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -13,9 +13,17 @@ import useNavigation from "./hooks/useNavigation";
 function App() {
   const { navIndex, setNavIndex, navHandler } = useNavigation(1);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+  }, []);
+
   return (
     <div className="app">
-      {true && (
+      {!isLoading && (
         <div className="flex flex-col h-screen">
           <header className="w-full h-[13%]">
             <Navbar setNavIndex={setNavIndex} />
@@ -73,7 +81,7 @@ function App() {
           </footer>
         </div>
       )}
-      {false && <LoadingScreen />}
+      {isLoading && <LoadingScreen />}
     </div>
   );
 }

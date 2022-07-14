@@ -2,15 +2,15 @@ import React from "react";
 
 export default function LoadingScreen() {
   return (
-    <div className="flex flex-col items-center justify-center py-20">
-      <h1 className="font-lobster text-[204px] ">
+    <div className="flex flex-col items-center justify-center py-28">
+      <h1 className="font-lobster text-6xl sm:text-8xl md:text-[143px] lg:text-[204px] mb-16">
         <span className="text-[#e33884]">Geor</span>
         <span className="text-[#2971ab]">gie...</span>
       </h1>
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 animate-spin"
+          className="h-14 w-14 animate-spin"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

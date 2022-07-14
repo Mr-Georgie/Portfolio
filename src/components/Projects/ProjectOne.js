@@ -10,7 +10,7 @@ export default function ProjectContent() {
         </div>
       </div>
       <div className="md:w-1/2">
-        <h2 className="text-7xl sm:text-[100px] text-[#2971ab] font-lobster">
+        <h2 className="text-3xl md:text-5xl lg:text-[60px] xl:text-[100px] text-custom-blue font-lobster">
           Typathon
         </h2>
         <p className="dark:text-white pt-4">

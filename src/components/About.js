@@ -8,7 +8,7 @@ export default function About(props) {
       </h1>
       <div className="flex flex-col-reverse sm:flex-row justify-center h-full gap-6">
         <div className="w-full py-4 md:w-1/2">
-          <h1 className="font-lobster text-5xl sm:text-[80px] text-custom-blue">
+          <h1 className="font-lobster text-2xl sm:text-3xl md:text-4xl lg:text-[80px] md:mb-12 text-custom-blue">
             Who is Georgie?
           </h1>
           <p className="dark:text-white">

@@ -52,6 +52,28 @@ export default function About(props) {
               </svg>
             </button>
           </div>
+          <div className="mt-6">
+            <button
+              onClick={() => props.navHandler("previous")}
+              className="flex bg-custom-blue text-white border-slate-800 dark:border-white border-l border-t py-4 px-8 gap-5"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M7 16l-4-4m0 0l4-4m-4 4h18"
+                />
+              </svg>
+              <span className="font-mono">Go back</span>
+            </button>
+          </div>
         </div>
         <div
           className="w-full sm:pt-4 md:w-1/2" //border border-slate-300

@@ -35,8 +35,22 @@ export default function ProjectTwo() {
             ReactJS, Figma, Node/ExpressJS, Vanilla CSS {"&"} GeophieAPI
           </span>
         </p>
-        <p className="font-serif dark:text-white  pt-4">
-          <span className="my-2 block sm:text-sm lg:text-base"></span>
+        <p className="flex gap-3 dark:text-white">
+          <span className="my-2 block sm:text-sm lg:text-base font-bold">
+            Github Link {"&"} Preview
+          </span>
+          <a
+            href="https://github.com/Mr-Georgie/movie-library"
+            className="my-2 mr-3 block sm:text-sm lg:text-base underline text-custom-blue"
+          >
+            Repo
+          </a>
+          <a
+            href="https://moviee-library.netlify.app/"
+            className="my-2 block sm:text-sm lg:text-base underline text-custom-blue"
+          >
+            Live
+          </a>
         </p>
       </div>
     </div>

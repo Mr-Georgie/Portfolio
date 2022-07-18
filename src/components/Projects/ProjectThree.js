@@ -36,6 +36,23 @@ export default function ProjectThree(props) {
             {"&"} HeadlessUI
           </span>
         </p>
+        <p className="flex gap-3 dark:text-white">
+          <span className="my-2 block sm:text-sm lg:text-base font-bold">
+            Github Link {"&"} Preview
+          </span>
+          <a
+            href="https://github.com/Mr-Georgie/ideas"
+            className="my-2 mr-3 block sm:text-sm lg:text-base underline text-custom-blue"
+          >
+            Repo
+          </a>
+          <a
+            href="http://ideasforgeeks.netlify.app/"
+            className="my-2 block sm:text-sm lg:text-base underline text-custom-blue"
+          >
+            Live
+          </a>
+        </p>
       </div>
     </div>
   );

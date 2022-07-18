@@ -35,6 +35,17 @@ export default function ProjectContent() {
             ReactJS, TailwindCSS, PlanetScale, {"&"} HeadlessUI
           </span>
         </p>
+        <p className="dark:text-white">
+          <span className="my-2 block sm:text-sm lg:text-base font-bold">
+            Github Link {"&"} Preview
+          </span>
+          <a
+            href="https://github.com/Mr-Georgie/typathon"
+            className="my-2 block sm:text-sm lg:text-base underline text-custom-blue"
+          >
+            Repo
+          </a>
+        </p>
       </div>
     </div>
   );

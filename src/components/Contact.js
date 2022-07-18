@@ -14,16 +14,22 @@ export default function Contact(props) {
       <div className="flex justify-center flex-wrap items-center h-full gap-6 dark:text-white my-8">
         <div className="flex flex-col items-center p-3 hover:shadow-lg">
           <img src={mail} alt="email" className="" />
-          <span className="font-mono font-bold">Email</span>
+          <span className="font-mono font-bold">George.isiguzo@yahoo.com</span>
         </div>
-        <div className="flex flex-col items-center p-3 hover:shadow-lg">
+        <a
+          href="https://www.linkedin.com/in/george-isiguzo-chinonye"
+          className="flex flex-col items-center p-3 hover:shadow-lg"
+        >
           <img src={linkedin} alt="linkedin" className="" />
           <span className="font-mono font-bold">LinkedIn</span>
-        </div>
-        <div className="flex flex-col items-center p-3 hover:shadow-lg">
+        </a>
+        <a
+          href="https://twitter.com/GeorgeIsiguzo"
+          className="flex flex-col items-center p-3 hover:shadow-lg"
+        >
           <img src={twitter} alt="twitter" className="" />
           <span className="font-mono font-bold">Twitter</span>
-        </div>
+        </a>
         <a
           href="https://github.com/Mr-Georgie"
           className="flex flex-col items-center p-3 hover:shadow-lg"
@@ -32,7 +38,7 @@ export default function Contact(props) {
           <span className="font-mono font-bold">Github</span>
         </a>
         <a
-          href="https://drive.google.com/file/d/1k4WtNsms6_Bk32vW7tAxuG1HY_3FLXlQ/view?usp=sharing"
+          href="https://drive.google.com/file/d/1i1BUSYHfWqF2iKRUYwCfj2bteR5IXWhe/view?usp=sharing"
           className="flex flex-col items-center pt-6 pb-3 px-3 hover:shadow-lg"
         >
           <img src={resume} alt="react" className="" />

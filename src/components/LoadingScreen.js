@@ -2,7 +2,7 @@ import React from "react";
 
 export default function LoadingScreen() {
   return (
-    <div className="flex items-center justify-center pt-64">
+    <div className="flex items-center justify-center pt-64 lg:pt-40">
       {/* <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

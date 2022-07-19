@@ -94,7 +94,19 @@ function App() {
           </footer>
         </div>
       )}
-      {isLoading && <LoadingScreen />}
+      <Transition
+        show={isLoading}
+        enter="transition ease-in-out duration-700 transform"
+        enterFrom="translate-x-full"
+        enterTo="translate-x-0"
+        leave="transition ease-in-out duration-500 transform"
+        leaveFrom="translate-x-0"
+        leaveTo="translate-x-full"
+        className="fixed top-0 left-0 w-full h-full bg-[#fff6ed] px-20 py-6 z-20 
+                 dark:text-white flex flex-col gap-10 font-mono shadow-md"
+      >
+        <LoadingScreen />
+      </Transition>
     </div>
   );
 }

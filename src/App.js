@@ -27,7 +27,7 @@ function App() {
       {!isLoading && (
         <div className="flex flex-col h-screen">
           <header className="w-full h-[13%]">
-            <Navbar setNavIndex={setNavIndex} />
+            <Navbar setNavIndex={setNavIndex} navIndex={navIndex} />
           </header>
           <section className="h-[74%] overflow-y-scroll overflow-x-hidden bg-white dark:bg-[#0A192F]">
             <Transition

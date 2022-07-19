@@ -1,5 +1,5 @@
 import React from "react";
-// import logo from "../images/logo.png";
+import { Transition } from "@headlessui/react";
 
 import useToggle from "../hooks/useToggle";
 
@@ -56,19 +56,44 @@ export default function Navbar(props) {
           className="w-full dark:text-white hidden sm:w-3/5 sm:flex 
                     items-center justify-center gap-10 font-mono text-xs sm:text-sm lg:text-xl"
         >
-          <span className="cursor-pointer" onClick={() => props.setNavIndex(1)}>
+          <span
+            className={`${
+              props.navIndex === 1 ? "text-custom-red" : ""
+            } cursor-pointer hover:text-custom-red`}
+            onClick={() => props.setNavIndex(1)}
+          >
             Home
           </span>
-          <span className="cursor-pointer" onClick={() => props.setNavIndex(2)}>
+          <span
+            className={`${
+              props.navIndex === 2 ? "text-custom-red" : ""
+            } cursor-pointer hover:text-custom-red`}
+            onClick={() => props.setNavIndex(2)}
+          >
             About
           </span>
-          <span className="cursor-pointer" onClick={() => props.setNavIndex(3)}>
+          <span
+            className={`${
+              props.navIndex === 3 ? "text-custom-red" : ""
+            } cursor-pointer hover:text-custom-red`}
+            onClick={() => props.setNavIndex(3)}
+          >
             Projects
           </span>
-          <span className="cursor-pointer" onClick={() => props.setNavIndex(4)}>
+          <span
+            className={`${
+              props.navIndex === 4 ? "text-custom-red" : ""
+            } cursor-pointer hover:text-custom-red`}
+            onClick={() => props.setNavIndex(4)}
+          >
             Skill
           </span>
-          <span className="cursor-pointer" onClick={() => props.setNavIndex(5)}>
+          <span
+            className={`${
+              props.navIndex === 5 ? "text-custom-red" : ""
+            } cursor-pointer hover:text-custom-red`}
+            onClick={() => props.setNavIndex(5)}
+          >
             Contact
           </span>
         </div>
@@ -90,57 +115,77 @@ export default function Navbar(props) {
           </svg>
         </div>
         <div className="relative">
-          {on && (
-            <div className="fixed right-0 bg-[#fff6ed] px-20 py-6 z-20 rounded-b-lg dark:text-white flex flex-col gap-10 font-mono shadow-md">
-              <span className="flex justify-end">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 cursor-pointer"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  onClick={toggler}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </span>
+          <Transition
+            show={on}
+            enter="transition ease-in-out duration-700 transform"
+            enterFrom="translate-x-full"
+            enterTo="translate-x-0"
+            leave="transition ease-in-out duration-500 transform"
+            leaveFrom="translate-x-0"
+            leaveTo="translate-x-full"
+            className="fixed top-0 left-0 w-full h-full bg-[#fff6ed] px-20 py-6 z-20 
+                 dark:text-white flex flex-col gap-10 font-mono shadow-md"
+          >
+            <span className="flex justify-end">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 cursor-pointer"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                onClick={toggler}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+            <div className="flex flex-col items-center gap-6">
               <span
-                className="text-xl cursor-pointer"
-                onClick={() => props.setNavIndex(1)}
+                className={`${
+                  props.navIndex === 1 ? "text-custom-red" : ""
+                } cursor-pointer text-2xl hover:text-custom-red`}
+                onClick={() => [props.setNavIndex(1), toggler()]}
               >
                 Home
               </span>
               <span
-                className="text-xl cursor-pointer"
-                onClick={() => props.setNavIndex(2)}
+                className={`${
+                  props.navIndex === 2 ? "text-custom-red" : ""
+                } cursor-pointer text-2xl hover:text-custom-red`}
+                onClick={() => [props.setNavIndex(2), toggler()]}
               >
                 About
               </span>
               <span
-                className="text-xl cursor-pointer"
-                onClick={() => props.setNavIndex(3)}
+                className={`${
+                  props.navIndex === 3 ? "text-custom-red" : ""
+                } cursor-pointer text-2xl hover:text-custom-red`}
+                onClick={() => [props.setNavIndex(3), , toggler()]}
               >
                 Projects
               </span>
               <span
-                className="text-xl cursor-pointer"
-                onClick={() => props.setNavIndex(4)}
+                className={`${
+                  props.navIndex === 4 ? "text-custom-red" : ""
+                } cursor-pointer text-2xl hover:text-custom-red`}
+                onClick={() => [props.setNavIndex(4), toggler()]}
               >
                 Skill
               </span>
               <span
-                className="text-xl cursor-pointer"
-                onClick={() => props.setNavIndex(5)}
+                className={`${
+                  props.navIndex === 5 ? "text-custom-red" : ""
+                } cursor-pointer text-2xl hover:text-custom-red`}
+                onClick={() => [props.setNavIndex(5), toggler()]}
               >
                 Contact
               </span>
             </div>
-          )}
+          </Transition>
         </div>
       </div>
     </div>

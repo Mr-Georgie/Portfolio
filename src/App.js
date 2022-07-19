@@ -17,9 +17,13 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false);
     }, 5000);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
@@ -102,8 +106,6 @@ function App() {
         leave="transition ease-in-out duration-500 transform"
         leaveFrom="translate-x-0"
         leaveTo="translate-x-full"
-        className="fixed top-0 left-0 w-full h-full bg-[#fff6ed] px-20 py-6 z-20 
-                 dark:text-white flex flex-col gap-10 font-mono shadow-md"
       >
         <LoadingScreen />
       </Transition>

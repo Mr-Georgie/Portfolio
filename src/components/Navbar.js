@@ -164,7 +164,7 @@ export default function Navbar(props) {
                 className={`${
                   props.navIndex === 3 ? "text-custom-red" : ""
                 } cursor-pointer text-2xl hover:text-custom-red`}
-                onClick={() => [props.setNavIndex(3), , toggler()]}
+                onClick={() => [props.setNavIndex(3), toggler()]}
               >
                 Projects
               </span>

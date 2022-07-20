@@ -20,11 +20,11 @@ export default function Skill(props) {
       <div className="flex flex-wrap items-center h-full gap-6 dark:text-white mb-6">
         <div className="flex flex-col items-center p-3 hover:shadow-lg">
           <img src={html} alt="html" className="w-1/2" />
-          <span className="font-mono font-bold">HTML</span>
+          <span className="font-mono font-bold">HTML5</span>
         </div>
         <div className="flex flex-col items-center p-3 hover:shadow-lg">
           <img src={css} alt="css" className="w-1/2" />
-          <span className="font-mono font-bold">CSS</span>
+          <span className="font-mono font-bold">CSS3</span>
         </div>
         <div className="flex flex-col items-center p-3 hover:shadow-lg">
           <img src={js} alt="js" className="w-1/2" />

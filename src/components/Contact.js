@@ -38,7 +38,7 @@ export default function Contact(props) {
           <span className="font-mono font-bold">Github</span>
         </a>
         <a
-          href="https://drive.google.com/file/d/1i1BUSYHfWqF2iKRUYwCfj2bteR5IXWhe/view?usp=sharing"
+          href="https://drive.google.com/file/d/1m6B4oazm98G3Ip4YkYjMPbDvOFtOoiwy/view?usp=sharing"
           className="flex flex-col items-center pt-6 pb-3 px-3 hover:shadow-lg"
         >
           <img src={resume} alt="react" className="" />

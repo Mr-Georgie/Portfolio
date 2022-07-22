@@ -48,7 +48,7 @@ export default function Contact(props) {
       <div className="pt-6 flex justify-center">
         <button
           onClick={() => props.navHandler("previous")}
-          className="flex bg-custom-red text-white border-slate-800 dark:border-white border-l border-t py-4 px-8 gap-5"
+          className="flex bg-custom-red text-white border-slate-800 dark:border-white border py-4 px-8 gap-5"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -17,7 +17,7 @@ export default function Home(props) {
         <div className="mt-10">
           <button
             onClick={() => props.navHandler("next")}
-            className="flex bg-custom-blue text-white border-slate-800 border-r border-t py-4 px-8 gap-5"
+            className="flex bg-custom-blue text-white border-slate-800 dark:border-white border py-4 px-8 gap-5"
           >
             <span className="font-mono">About Me</span>
             <svg

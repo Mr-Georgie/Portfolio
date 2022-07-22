@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import LoadingScreen from "./components/LoadingScreen";
+import LoadingScreen from "./sections/LoadingScreen";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Skill from "./components/Skill";
-import Contact from "./components/Contact";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Skill from "./sections/Skill";
+import Contact from "./sections/Contact";
 
 import { Transition } from "@headlessui/react";
 import useNavigation from "./hooks/useNavigation";
@@ -33,7 +33,7 @@ function App() {
           <header className="w-full h-[13%]">
             <Navbar setNavIndex={setNavIndex} navIndex={navIndex} />
           </header>
-          <section className="h-[74%] overflow-y-scroll overflow-x-hidden bg-white dark:bg-[#0A192F]">
+          <section className="h-[74%] overflow-y-scroll overflow-x-hidden bg-white dark:bg-[#02080f]">
             <Transition
               show={navIndex === 1}
               enter="transition ease-in-out duration-700 transform"

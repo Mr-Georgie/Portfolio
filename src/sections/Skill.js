@@ -112,7 +112,7 @@ export default function Skill(props) {
         <div className="mt-6">
           <button
             onClick={() => props.navHandler("next")}
-            className="flex bg-custom-blue text-white border-slate-800 dark:border-white border-r border-t py-4 px-8 gap-5"
+            className="flex bg-custom-blue text-white border-slate-800 dark:border-white border py-4 px-8 gap-5"
           >
             <span className="font-mono">Hire Me!</span>
             <svg
@@ -135,7 +135,7 @@ export default function Skill(props) {
       <div className="pt-6">
         <button
           onClick={() => props.navHandler("previous")}
-          className="flex bg-custom-red text-white border-slate-800 dark:border-white border-l border-t py-4 px-8 gap-5"
+          className="flex bg-custom-red text-white border-slate-800 dark:border-white border py-4 px-8 gap-5"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

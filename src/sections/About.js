@@ -3,20 +3,16 @@ import React from "react";
 export default function About(props) {
   return (
     <div className="px-10 py-8 xl:px-24">
-      <h1 className="text-xl sm:text-[28px] font-extrabold text-custom-red pb-8 lg:pb-0">
+      <h1 className="text-xl sm:text-[28px] font-extrabold text-custom-red mb-8 lg:pb-0">
         About Me
       </h1>
       <div className="flex flex-col-reverse sm:flex-row justify-center h-full gap-6">
         <div className="w-full py-4 md:w-1/2">
-          <h1 className="font-lobster text-2xl sm:text-3xl md:text-4xl lg:text-[80px] md:mb-12 text-custom-blue">
+          <h1 className="font-lobster text-2xl sm:text-3xl md:text-4xl lg:text-[75px] md:mb-12 text-custom-blue">
             Who is Georgie?
           </h1>
           <p className="dark:text-white">
-            <span
-              className="my-2 block sm:text-sm lg:text-base first-line:uppercase first-line:tracking-widest
-              first-letter:text-7xl first-letter:font-bold first-letter:font-lobster
-              first-letter:mr-3 first-letter:float-left font-medium"
-            >
+            <span className="my-2 block sm:text-sm lg:text-base">
               A Junior Web Developer who loves building interactive web apps
               from beautiful Figma designs.
             </span>
@@ -33,7 +29,7 @@ export default function About(props) {
           <div className="mt-6">
             <button
               onClick={() => props.navHandler("next")}
-              className="flex bg-custom-red text-white border-slate-800 dark:border-white border-r border-t py-4 px-8 gap-5"
+              className="flex bg-custom-blue text-white border-slate-800 dark:border-white border py-4 px-8 gap-5"
             >
               <span className="font-mono">See my projects</span>
               <svg
@@ -55,7 +51,7 @@ export default function About(props) {
           <div className="mt-6">
             <button
               onClick={() => props.navHandler("previous")}
-              className="flex bg-custom-blue text-white border-slate-800 dark:border-white border-l border-t py-4 px-8 gap-5"
+              className="flex bg-custom-red text-white border-slate-800 dark:border-white border py-4 px-8 gap-5"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

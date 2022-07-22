@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply bg-[#fff6ed] dark:bg-[#0A192F] h-full scroll-smooth;
+  @apply bg-[#fff6ed] dark:bg-[#02080f] h-full scroll-smooth;
 }
 @tailwind components;
 @tailwind utilities;

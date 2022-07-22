@@ -30,10 +30,10 @@ function App() {
     <div className="app">
       {!isLoading && (
         <div className="flex flex-col h-screen">
-          <header className="w-full h-[13%]">
+          <header className="w-full h-[10%] sm:h-[13%]">
             <Navbar setNavIndex={setNavIndex} navIndex={navIndex} />
           </header>
-          <section className="h-[74%] overflow-y-scroll overflow-x-hidden bg-white dark:bg-[#02080f]">
+          <section className="h-[80%] sm:h-[74%] overflow-y-scroll overflow-x-hidden bg-white dark:bg-[#02080f]">
             <Transition
               show={navIndex === 1}
               enter="transition ease-in-out duration-700 transform"
@@ -93,7 +93,7 @@ function App() {
               <Contact navHandler={navHandler} />
             </Transition>
           </section>
-          <footer className="w-full h-[13%]">
+          <footer className="w-full h-[10%] sm:h-[13%]">
             <Footer />
           </footer>
         </div>

@@ -123,7 +123,7 @@ export default function Navbar(props) {
             leave="transition ease-in-out duration-500 transform"
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
-            className="fixed top-0 left-0 w-full h-full bg-[#fff6ed] dark:bg-[#0A192F] px-20 py-6 z-20 
+            className="fixed top-0 left-0 w-full h-full bg-[#fff6ed] dark:bg-[#0A192F] px-8 py-6 z-20 
                  dark:text-white flex flex-col gap-10 font-mono shadow-md"
           >
             <span className="flex justify-end">

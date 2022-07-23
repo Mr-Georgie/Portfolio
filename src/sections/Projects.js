@@ -85,7 +85,7 @@ export default function Projects(props) {
             </span>
           </button>
         </div>
-        <div className="flex flex-row-reverse lg:flex-row justify-between gap-20 pt-6 lg:pt-0">
+        <div className="flex flex-col-reverse gap-4 lg:flex-row justify-between pt-6 lg:gap-20 lg:pt-0">
           <div className="">
             <button
               onClick={() => props.navHandler("previous")}

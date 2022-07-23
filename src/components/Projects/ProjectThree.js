@@ -1,22 +1,21 @@
 import React from "react";
-import ideas from "../../images/ideas.gif";
+import typathon from "../../images/typathon-ui4.gif";
 
-export default function ProjectThree(props) {
+export default function ProjectContent() {
   return (
     <div className="flex flex-col md:flex-row-reverse gap-5">
       <div className="md:w-1/2">
         <div className="aspect-w-16 aspect-h-9">
-          <img className="w-full" src={ideas} alt="" />
+          <img className="w-full" src={typathon} alt="" />
         </div>
       </div>
       <div className="md:w-1/2">
         <h2 className="text-3xl md:text-5xl lg:text-[60px] xl:text-[100px] text-custom-blue font-lobster">
-          Ideas
+          Typathon
         </h2>
         <p className="dark:text-white pt-4">
           <span className="my-2 block sm:text-sm lg:text-base">
-            Ideas For Geeks is a fictional online community where like minded
-            people share ideas for softwares they would love to create
+            The ultimate speed typing game (still in development)
           </span>
         </p>
         <p className="dark:text-white">
@@ -24,7 +23,8 @@ export default function ProjectThree(props) {
             Features
           </span>
           <span className="my-2 block sm:text-sm lg:text-base">
-            Dark theme, Search {"&"} Filter
+            Dark {"&"} Light themes, Sound (SFX), Database to save username and
+            highscores
           </span>
         </p>
         <p className="dark:text-white">
@@ -32,25 +32,18 @@ export default function ProjectThree(props) {
             Built With
           </span>
           <span className="my-2 block sm:text-sm lg:text-base">
-            ReactJS, React Router, TailwindCSS Appwrite, DigitalOcean, Docker{" "}
-            {"&"} HeadlessUI
+            ReactJS, TailwindCSS, PlanetScale, {"&"} HeadlessUI
           </span>
         </p>
-        <p className="flex gap-3 dark:text-white">
+        <p className="dark:text-white">
           <span className="my-2 block sm:text-sm lg:text-base font-bold">
             Github Link {"&"} Preview
           </span>
           <a
-            href="https://github.com/Mr-Georgie/ideas"
-            className="my-2 mr-3 block sm:text-sm lg:text-base underline text-custom-blue"
-          >
-            Repo
-          </a>
-          <a
-            href="http://ideasforgeeks.netlify.app/"
+            href="https://github.com/Mr-Georgie/typathon"
             className="my-2 block sm:text-sm lg:text-base underline text-custom-blue"
           >
-            Live
+            Repo
           </a>
         </p>
       </div>

@@ -22,8 +22,8 @@ export default function About(props) {
               building things that live in computers was my life's purpose 😅
             </span>
             <span className="my-2 block sm:text-sm lg:text-base">
-              I'm currently seeking to secure a role as a ReactJS developer at a
-              firm where I can do my best work while learning and growing.
+               I currently work at Flutterwave where I get to apply my technical 
+               skills in simplifying payments for endless possibilities across the globe.
             </span>
           </p>
           <div className="mt-6">

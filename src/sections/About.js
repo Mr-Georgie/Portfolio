@@ -13,7 +13,7 @@ export default function About(props) {
           </h1>
           <p className="dark:text-white">
             <span className="my-2 block sm:text-sm lg:text-base">
-              A Junior Web Developer who loves building interactive web apps
+              A Fullstack Web Developer who loves building interactive web apps
               from beautiful Figma designs.
             </span>
             <span className="my-2 block sm:text-sm lg:text-base">

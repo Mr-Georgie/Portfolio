@@ -7,18 +7,19 @@ html {
 }
 
 body {
-  @apply bg-[#fff6ed] dark:bg-[#02080f] h-full scroll-smooth;
+  @apply bg-slate-50 dark:bg-[#222529] scroll-smooth;
 }
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
   .app {
-    @apply h-screen scroll-smooth;
+    @apply scroll-smooth;
   }
 
-  .square-img {
-    background-image: url("./images/headshot.png");
+  .btn-color {
+    @apply dark:text-white dark:hover:text-custom-red hover:text-custom-red border-slate-800 dark:border-white 
+    hover:border-custom-red dark:hover:border-custom-red border;
   }
 
   .project-one-gif {

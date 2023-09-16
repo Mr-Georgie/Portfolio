@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Home(props) {
   return (
-    <div className="mt-20 font-mono" id="home">
+    <div className="mt-8 font-mono" id="home">
       <div className="px-10 py-20 xl:px-24">
         <h1 className="text-xl sm:text-[28px] dark:text-white">
           Hi there👋, I'm
@@ -23,22 +23,27 @@ export default function Home(props) {
         </h6>
 
         <div className="mt-10">
-          <button className="flex btn-color py-4 px-8 gap-5">
-            <span className="font-mono">Download CV</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 animate-bounce"
+          <button>
+            <a
+              href="https://drive.google.com/file/d/1Wqtg4PUP2HAPPzzwMzX4iwy6BRZwhVim/view?usp=sharing"
+              className="flex btn-color py-4 px-8 gap-5"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
-              />
-            </svg>
+              <span className="font-mono">Download CV</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6 animate-bounce"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                />
+              </svg>
+            </a>
           </button>
         </div>
       </div>

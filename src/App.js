@@ -12,7 +12,7 @@ import { Transition } from "@headlessui/react";
 import useNavigation from "./hooks/useNavigation";
 
 function App() {
-  const { navIndex, setNavIndex, navHandler } = useNavigation(1);
+  const { navIndex, setNavIndex } = useNavigation(1);
 
   const [isLoading, setIsLoading] = useState(true);
 

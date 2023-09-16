@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
 
 import useToggle from "../hooks/useToggle";
@@ -11,10 +11,45 @@ export default function Navbar(props) {
     darkModeToggler();
     document.documentElement.classList.toggle("dark"); // this add or removes the dark class of the html document
   };
+
+  const [isScrolingToTop, setIsScrollingToTop] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    let prevHorizontalScroll = 0;
+
+    const handleScroll = () => {
+      const currentHorizontalScroll = window.scrollY;
+      const isTop = currentHorizontalScroll === 0;
+
+      const scrollingToTop = currentHorizontalScroll < prevHorizontalScroll;
+
+      setIsScrollingToTop(scrollingToTop);
+      setIsAtTop(isTop);
+
+      prevHorizontalScroll = currentHorizontalScroll;
+    };
+
+    // Add the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="w-full border-y border-slate-300 dark:border-slate-800 h-full">
-      <div className="flex h-full px-8 sm:px-0">
+    <div
+      className={`${
+        isScrolingToTop ? "fixed z-50 sm:translate-y-0 sm:opacity-100" : ""
+      } w-full bg-slate-50 dark:bg-[#222529] transition-opacity duration-500 ease-in-out ${
+        !isAtTop ? "shadow-lg" : ""
+      }`}
+    >
+      <div className="flex px-8 py-4 sm:px-0">
         <div className="flex md:justify-center items-center sm:w-1/5">
+          {/* Toggler button */}
           <div className="bg-black/[.5] rounded-full p-2">
             {onDarkMode && (
               <svg
@@ -52,51 +87,58 @@ export default function Navbar(props) {
             )}
           </div>
         </div>
+        {/* nav */}
         <div
           className="w-full dark:text-white hidden sm:w-3/5 sm:flex 
                     items-center justify-center gap-10 font-mono text-xs sm:text-sm lg:text-xl"
         >
-          <span
+          <a
+            href="#home"
             className={`${
               props.navIndex === 1 ? "text-custom-red" : ""
             } cursor-pointer hover:text-custom-red`}
             onClick={() => props.setNavIndex(1)}
           >
             Home
-          </span>
-          <span
+          </a>
+          <a
+            href="#experience"
             className={`${
               props.navIndex === 2 ? "text-custom-red" : ""
             } cursor-pointer hover:text-custom-red`}
             onClick={() => props.setNavIndex(2)}
           >
-            About
-          </span>
-          <span
+            Experience
+          </a>
+          <a
+            href="#projects"
             className={`${
               props.navIndex === 3 ? "text-custom-red" : ""
             } cursor-pointer hover:text-custom-red`}
             onClick={() => props.setNavIndex(3)}
           >
             Projects
-          </span>
-          <span
+          </a>
+          <a
+            href="#others"
             className={`${
               props.navIndex === 4 ? "text-custom-red" : ""
             } cursor-pointer hover:text-custom-red`}
             onClick={() => props.setNavIndex(4)}
           >
-            Skill
-          </span>
-          <span
+            Hobby
+          </a>
+          <a
+            href="#contact"
             className={`${
               props.navIndex === 5 ? "text-custom-red" : ""
             } cursor-pointer hover:text-custom-red`}
             onClick={() => props.setNavIndex(5)}
           >
             Contact
-          </span>
+          </a>
         </div>
+        {/* small nav hmabuger button */}
         <div className="w-full sm:hidden flex justify-end items-center gap-10 font-mono">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -114,6 +156,7 @@ export default function Navbar(props) {
             />
           </svg>
         </div>
+        {/* small nav content */}
         <div className="relative">
           <Transition
             show={on}
@@ -123,7 +166,7 @@ export default function Navbar(props) {
             leave="transition ease-in-out duration-500 transform"
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
-            className="fixed top-0 left-0 w-full h-full bg-[#fff6ed] dark:bg-[#0A192F] px-8 py-6 z-20 
+            className="fixed top-0 left-0 w-full h-full bg-slate-50 dark:bg-[#222529] px-8 py-6 z-20 
                  dark:text-white flex flex-col gap-10 font-mono shadow-md"
           >
             <span className="flex justify-end">
@@ -144,46 +187,51 @@ export default function Navbar(props) {
               </svg>
             </span>
             <div className="flex flex-col items-center gap-6">
-              <span
+              <a
+                href="#home"
                 className={`${
                   props.navIndex === 1 ? "text-custom-red" : ""
                 } cursor-pointer text-2xl hover:text-custom-red`}
-                onClick={() => [props.setNavIndex(1), toggler()]}
+                onClick={() => props.setNavIndex(1)}
               >
                 Home
-              </span>
-              <span
+              </a>
+              <a
+                href="#experience"
                 className={`${
                   props.navIndex === 2 ? "text-custom-red" : ""
                 } cursor-pointer text-2xl hover:text-custom-red`}
-                onClick={() => [props.setNavIndex(2), toggler()]}
+                onClick={() => props.setNavIndex(2)}
               >
-                About
-              </span>
-              <span
+                Experience
+              </a>
+              <a
+                href="#projects"
                 className={`${
                   props.navIndex === 3 ? "text-custom-red" : ""
                 } cursor-pointer text-2xl hover:text-custom-red`}
-                onClick={() => [props.setNavIndex(3), toggler()]}
+                onClick={() => props.setNavIndex(3)}
               >
                 Projects
-              </span>
-              <span
+              </a>
+              <a
+                href="#others"
                 className={`${
                   props.navIndex === 4 ? "text-custom-red" : ""
                 } cursor-pointer text-2xl hover:text-custom-red`}
-                onClick={() => [props.setNavIndex(4), toggler()]}
+                onClick={() => props.setNavIndex(4)}
               >
-                Skill
-              </span>
-              <span
+                Hobby
+              </a>
+              <a
+                href="#contact"
                 className={`${
                   props.navIndex === 5 ? "text-custom-red" : ""
                 } cursor-pointer text-2xl hover:text-custom-red`}
-                onClick={() => [props.setNavIndex(5), toggler()]}
+                onClick={() => props.setNavIndex(5)}
               >
                 Contact
-              </span>
+              </a>
             </div>
           </Transition>
         </div>

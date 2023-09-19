@@ -62,7 +62,7 @@ export default function ContactMe() {
           </div>
         </div>
       </div>
-      <div className="flex justify-end pt-16 px-10">
+      <div className="flex justify-center sm:justify-end pt-16 px-10">
         <a
           className="flex border-slate-800 dark:border-white text-custom-blue hover:text-custom-red animate-pulse"
           href="#home"

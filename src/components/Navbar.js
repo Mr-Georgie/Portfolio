@@ -4,12 +4,20 @@ import { Transition } from "@headlessui/react";
 import useToggle from "../hooks/useToggle";
 
 export default function Navbar(props) {
-  const { on: onDarkMode, toggler: darkModeToggler } = useToggle(false);
+  const [onDarkMode, setOnDarkMode] = useState(false);
   const { on, toggler } = useToggle(false);
 
-  const themeToggler = () => {
-    darkModeToggler();
-    document.documentElement.classList.toggle("dark"); // this add or removes the dark class of the html document
+  const themeToggler = (bool) => {
+    // this add or removes the dark class of the html document
+    // document.documentElement.classList.toggle("dark");
+
+    if (bool) {
+      document.documentElement.classList.add("dark");
+      setOnDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      setOnDarkMode(false);
+    }
   };
 
   const [isScrolingToTop, setIsScrollingToTop] = useState(false);
@@ -50,16 +58,26 @@ export default function Navbar(props) {
       <div className="flex px-8 py-4 sm:px-0">
         <div className="flex md:justify-center items-center sm:w-1/5">
           {/* Toggler button */}
-          <div className="bg-black/[.5] rounded-full p-2">
-            {onDarkMode && (
+          <div
+            className={`${
+              onDarkMode
+                ? "border-white transition-all duration-300"
+                : "border-slate-800 transition-all duration-300"
+            } border rounded-full py-1 px-2 flex gap-4`}
+          >
+            <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-white cursor-pointer"
+                className={`${
+                  onDarkMode
+                    ? "transition-colors bg-transparent hover:bg-white hover:text-black duration-300"
+                    : "transition-colors bg-black/[.5] duration-300"
+                } h-6 w-6 cursor-pointer rounded-full p-1 text-white`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={2}
-                onClick={themeToggler}
+                onClick={() => themeToggler(false)}
               >
                 <path
                   strokeLinecap="round"
@@ -67,16 +85,20 @@ export default function Navbar(props) {
                   d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                 />
               </svg>
-            )}
-            {!onDarkMode && (
+            </div>
+            <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-white cursor-pointer"
+                className={`${
+                  onDarkMode
+                    ? "transition-colors bg-white hover:bg-white duration-300"
+                    : "transition-colors hover:bg-black/[.5] hover:text-white duration-300"
+                } h-6 w-6 cursor-pointer rounded-full p-1 hover:text-black`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={2}
-                onClick={themeToggler}
+                onClick={() => themeToggler(true)}
               >
                 <path
                   strokeLinecap="round"
@@ -84,7 +106,7 @@ export default function Navbar(props) {
                   d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
                 />
               </svg>
-            )}
+            </div>
           </div>
         </div>
         {/* nav */}

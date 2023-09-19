@@ -2,14 +2,14 @@ import React from "react";
 
 export default function Experience(props) {
   return (
-    <div className="my-40 px-10 font-mono" id="experience">
-      <div className="py-12 xl:px-24">
+    <div className="my-40 font-mono" id="experience">
+      <div className="px-10 py-12 xl:px-24">
         <h1 className="text-3xl font-extrabold mb-8 dark:text-white pt-14 flex items-center gap-3">
           Where I work
         </h1>
         <div className="xl:grid xl:grid-cols-2">
           <div>
-            <p className="dark:text-white text-xl">
+            <p className="dark:text-white text-lg sm:text-xl">
               Backend Engineer |{" "}
               <a
                 href="https://flutterwave.com/"
@@ -21,12 +21,14 @@ export default function Experience(props) {
               <span className="text-xs italic">(August 2022 - Present)</span>
             </p>
             <div className="mt-6">
-              <h4 className="text-custom-blue font-bold text-lg">What I do</h4>
-              <p className="dark:text-white">
+              <h4 className="text-custom-blue font-bold sm:text-lg">
+                What I do
+              </h4>
+              <p className="dark:text-white text-sm sm:text-base">
                 I build card and wallet payment processing microservices for
                 borderless funds transfer. My focus is on:
               </p>
-              <div className="dark:text-white py-3 text-sm flex flex-col gap-2">
+              <div className="dark:text-white py-3 text-xs sm:text-sm flex flex-col gap-2">
                 <div className="grid grid-cols-12 gap-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -101,11 +103,11 @@ export default function Experience(props) {
             </div>
 
             <div className="mt-6">
-              <h6 className="text-custom-blue font-bold text-lg">
+              <h6 className="text-custom-blue font-bold sm:text-lg">
                 Tools & Technologies I Use
               </h6>
 
-              <div className="dark:text-white py-3 text-sm flex flex-col gap-2">
+              <div className="dark:text-white py-3 text-xs sm:text-sm flex flex-col gap-2">
                 <div className="grid grid-cols-12 gap-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +185,7 @@ export default function Experience(props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-end mt-2 px-10">
+      <div className="flex justify-center sm:justify-end mt-2 px-10">
         <a
           className="flex border-slate-800 dark:border-white text-custom-blue hover:text-custom-red"
           href="#projects"

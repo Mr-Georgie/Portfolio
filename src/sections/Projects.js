@@ -18,7 +18,7 @@ export default function Projects(props) {
         </h1>
         <div className="xl:grid xl:grid-cols-2 gap-10">
           <div className="flex flex-col">
-            <div className="dark:text-white overflow-hidden h-[280px]">
+            <div className="dark:text-white overflow-hidden h-[180px] sm:h-[280px]">
               <Transition
                 show={navIndex === 1}
                 enter="transition ease-in-out duration-700 transform"
@@ -84,7 +84,34 @@ export default function Projects(props) {
               </Transition>
             </div>
 
-            <div className="flex gap-4 text-xs my-3">
+            <div className="flex gap-4 text-xs my-3 sm:hidden">
+              <button
+                onClick={() => setNavIndex(1)}
+                className={`flex btn-color py-4 px-8 gap-5 ${
+                  navIndex === 1 ? "bg-black text-white" : ""
+                }`}
+              >
+                <span className="font-mono">1</span>
+              </button>
+              <button
+                onClick={() => setNavIndex(2)}
+                className={`flex btn-color py-4 px-8 gap-5 ${
+                  navIndex === 2 ? "bg-black text-white" : ""
+                }`}
+              >
+                <span className="font-mono">2</span>
+              </button>
+              <button
+                onClick={() => setNavIndex(3)}
+                className={`flex btn-color py-4 px-8 gap-5 ${
+                  navIndex === 3 ? "bg-black text-white" : ""
+                }`}
+              >
+                <span className="font-mono">3</span>
+              </button>
+            </div>
+
+            <div className="sm:flex gap-4 text-xs my-3 hidden">
               <button
                 onClick={() => setNavIndex(1)}
                 className={`flex btn-color py-4 px-8 gap-5 ${
@@ -112,7 +139,7 @@ export default function Projects(props) {
             </div>
           </div>
           <div>
-            <p className="dark:text-white text-xl">
+            <p className="dark:text-white text-lg sm:text-xl">
               Developed Fullstack applications. Collaborated with clients,
               developers and UI/UX experts
             </p>
@@ -121,7 +148,7 @@ export default function Projects(props) {
                 What I did:
               </h6>
 
-              <div className="dark:text-white py-3 text-sm flex flex-col gap-2">
+              <div className="dark:text-white py-3 text-xs sm:text-sm flex flex-col gap-2">
                 <div className="grid grid-cols-12 gap-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -192,11 +219,11 @@ export default function Projects(props) {
             </div>
 
             <div className="mt-6">
-              <h6 className="text-custom-blue font-bold text-lg">
+              <h6 className="text-custom-blue font-bold sm:text-lg">
                 Tools & Technologies
               </h6>
 
-              <div className="dark:text-white py-3 text-sm flex flex-col gap-2">
+              <div className="dark:text-white py-3 text-xs sm:text-sm flex flex-col gap-2">
                 <div className="grid grid-cols-12 gap-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +251,7 @@ export default function Projects(props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-start pt-4 pb-10 px-10">
+      <div className="flex justify-center sm:justify-start pt-4 pb-10 px-2 sm:px-10">
         <a
           className="flex border-slate-800 dark:border-white text-custom-blue hover:text-custom-red"
           href="https://github.com/Mr-Georgie?tab=repositories"
@@ -250,7 +277,7 @@ export default function Projects(props) {
           </span>
         </a>
       </div>
-      <div className="flex justify-end mt-2 px-10">
+      <div className="flex justify-center sm:justify-end mt-2 px-10">
         <a
           className="flex border-slate-800 dark:border-white text-custom-blue hover:text-custom-red"
           href="#others"

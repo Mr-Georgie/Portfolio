@@ -4,14 +4,14 @@ export default function Home(props) {
   return (
     <div className="mt-8 font-mono" id="home">
       <div className="px-10 py-20 xl:px-24">
-        <h1 className="text-xl sm:text-[28px] dark:text-white">
-          Hi there👋, I'm
-        </h1>
-        <h1 className="font-bold text-7xl sm:text-[120px] dark:text-white">
+        <h1 className="text sm:text-[28px] dark:text-white">Hi there👋, I'm</h1>
+        <h1 className="font-bold text-6xl sm:text-7xl sm:text-[120px] dark:text-white">
           Georgie
         </h1>
-        <h6 className="text-4xl mt-6 dark:text-white">A Software Engineer</h6>
-        <h6 className="text-xl mt-6 dark:text-white">
+        <h6 className="text-2xl sm:text-4xl mt-6 dark:text-white">
+          A Software Engineer
+        </h6>
+        <h6 className="text-sm sm:text-xl mt-6 dark:text-white">
           I get motivated building products that improves lives and thrive on
           user feedback for constant improvement. Don't take my word for it;{" "}
           <a
@@ -47,7 +47,7 @@ export default function Home(props) {
           </button>
         </div>
       </div>
-      <div className="flex justify-end mt-2 px-10">
+      <div className="flex justify-center sm:justify-end mt-2 px-10">
         <a
           className="flex border-slate-800 dark:border-white text-custom-blue hover:text-custom-red animate-pulse"
           href="#experience"

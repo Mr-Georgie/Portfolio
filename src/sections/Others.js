@@ -128,7 +128,7 @@ export default function Others(props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-end mt-2 px-10">
+      <div className="flex justify-center sm:justify-end mt-2 px-10">
         <a
           className="flex border-slate-800 dark:border-white text-custom-blue hover:text-custom-red"
           href="#contact"

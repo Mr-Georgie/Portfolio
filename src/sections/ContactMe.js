@@ -54,7 +54,7 @@ export default function ContactMe() {
             <img src={resume} alt="email" className="py-2" />
 
             <a
-              href="https://drive.google.com/file/d/1Wqtg4PUP2HAPPzzwMzX4iwy6BRZwhVim/view?usp=sharing"
+              href="https://drive.google.com/"
               className="hover:text-custom-red"
             >
               <p className="font-extrabold text-xs">Download CV</p>

@@ -166,7 +166,7 @@ export default function Projects(props) {
                   </svg>
                   <p className="col-span-11">
                     Building the UI, Backend API, Admin Portal and the Sign Up
-                    Email Service (using Resend API) for VelisoDesign (Ongoing)
+                    Email Service (using Resend API) for VelisoDesign
                   </p>
                 </div>
                 <div className="grid grid-cols-12 gap-4">

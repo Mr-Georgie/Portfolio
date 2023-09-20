@@ -25,7 +25,7 @@ export default function Home(props) {
         <div className="mt-10">
           <button>
             <a
-              href="https://drive.google.com"
+              href="https://drive.google.com/file/d/1Wqtg4PUP2HAPPzzwMzX4iwy6BRZwhVim/view?usp=drive_link"
               className="flex btn-color py-4 px-8 gap-5"
             >
               <span className="font-mono">Download CV</span>
